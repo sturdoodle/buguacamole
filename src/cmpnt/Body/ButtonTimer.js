@@ -9,8 +9,8 @@ export default function ButtonTimer(props) {
 
   const renderTime = ({ remainingTime }) => {
     if (remainingTime === 0) {
-        setbtndisablevalue("false");
-        setinfovalue("false");
+      setbtndisablevalue("false");
+      setinfovalue("false");
       return (
         <div className="timer">
           <div className="value">{remainingTime}</div>
@@ -36,52 +36,61 @@ export default function ButtonTimer(props) {
 
   const btnenabled = () => {
     // console.log(btndisablevalue)
-    if (btndisablevalue==="true"){
-        return true;
+    if (btndisablevalue === "true") {
+      return true;
+    } else {
+      return false;
     }
-    else{
-        return false;
-    }
-    
   };
 
   return (
     <>
-      <div className="pt-3 mt-3">
-
-        <div className="timer-wrapper">
+      <div className="pt-3 mt-3 ">
+        <Gads />
+        <div className="timer-wrapper mt-2 mb-3">
           <CountdownCircleTimer
             isPlaying
             duration={13}
-            colors={["#004777","#006577", "#F7B801", "#A30000","#a30029", "#A30000"]}
-            colorsTime={[13,10, 6, 4,2, 0]}
+            colors={[
+              "#004777",
+              "#006577",
+              "#F7B801",
+              "#A30000",
+              "#a30029",
+              "#A30000",
+            ]}
+            colorsTime={[13, 10, 6, 4, 2, 0]}
           >
             {renderTime}
           </CountdownCircleTimer>
         </div>
-        {infovalue==="false"?"":<p className="pb-3 mb-3 info alert alert-primary">Download Button will appear</p>}
+        {infovalue === "false" ? (
+          ""
+        ) : (
+          <p className="pb-3 mb-3 info alert alert-primary">
+            Download Button will appear
+          </p>
+        )}
       </div>
-      <Gads/>
+      <Gads />
 
-      {infovalue==="false"?
-      <div className="p-3">
-        <p className="text-center">
-          <button
-            type="button"
-            className=" btn btn-success btn-lg btn-block"
-            onClick={() => openInNewTab(props.fileprops)}
-            disabled={btnenabled()}
-            // disabled={btndisablevalue}
-          >
-            Download File
-          </button>
-          <br />
-          {}
-        </p>
-        
-      </div>
-      :<></>}
-     
+      {infovalue === "false" ? (
+        <div className="p-3">
+          <p className="text-center pt-2">
+            <button
+              type="button"
+              className=" btn btn-success btn-lg btn-block"
+              onClick={() => openInNewTab(props.fileprops)}
+              disabled={btnenabled()}
+            >
+              Download File
+            </button>
+            <br />
+          </p>
+        </div>
+      ) : (
+        <></>
+      )}
     </>
   );
 }

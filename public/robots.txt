@@ -17,11 +17,11 @@ Disallow:
 
 User-agent: MSNBot
 
-Disallow: 
+Disallow: /
 
 User-agent: Slurp
 
-Disallow: 
+Disallow: /
 
 User-agent: Teoma
 
@@ -49,7 +49,7 @@ Disallow: /
 
 User-agent: yahoo-mmcrawler
 
-Disallow: 
+Disallow: /
 
 User-agent: psbot
 
@@ -57,9 +57,8 @@ Disallow: /
 
 User-agent: yahoo-blogs/v3.9
 
-Disallow: 
+Disallow: /
 
-User-agent: *
 
  
 Disallow: /cgi-bin/

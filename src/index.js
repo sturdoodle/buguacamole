@@ -11,6 +11,7 @@ root.render(
      <Switch>
     <Route exact path='/:pageid' component={Tbzone}></Route>
     <Route exact path='/:pageid/:subpageid' component={Tbzone}></Route>
+    <Route path='/:pageid/:subpageid' component={Tbzone}></Route>
     <Route exact path='/' component={App}></Route>
     </Switch>
   </Router>

@@ -25,7 +25,7 @@ export default function Bodycontent(props) {
             </div>
           </section>
           <section
-            className="main-section col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 sidebar rounded text-muted"
+            className="main-section col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 sidebar rounded text-muted mt-3 pt-3"
             id="section-2-1"
           >
             {/* adsense */}

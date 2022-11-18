@@ -50,8 +50,9 @@ export default function ButtonTimer(props) {
         <div className="timer-wrapper mt-2 mb-3">
           <CountdownCircleTimer
             isPlaying
-            duration={13}
+            duration={20}
             colors={[
+              "#004777",
               "#004777",
               "#006577",
               "#F7B801",
@@ -59,7 +60,7 @@ export default function ButtonTimer(props) {
               "#a30029",
               "#A30000",
             ]}
-            colorsTime={[13, 10, 6, 4, 2, 0]}
+            colorsTime={[20,13, 10, 6, 4, 2, 0]}
           >
             {renderTime}
           </CountdownCircleTimer>

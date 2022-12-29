@@ -6,8 +6,8 @@ const timb12 = props => {
       filepathname = props.match.params.pageid.replace("1340-", "");
       // console.log(filepathname)
       // https://drive.google.com/uc?id=1_8b1Fxwx3LT0uAtSdiAB3JKf8NYfbPhX&confirm=t
-      // filepathname = `https://drive.google.com/file/d/${filepathname}/view?usp=drivesdk`;
-      filepathname = `https://drive.google.com/uc?id=${filepathname}&confirm=t`;
+      filepathname = `https://drive.google.com/file/d/${filepathname}/view?usp=drivesdk`;
+      // filepathname = `https://drive.google.com/uc?id=${filepathname}&confirm=t`;
       // console.log(filepathname)
       window.location.replace(filepathname)
     }
